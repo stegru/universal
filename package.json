@@ -30,7 +30,7 @@
         "write-file-atomic": "2.3.0",
         "xml-mapping": "1.7.1"
     },
-    "bundledDependencies" : [ "transformer", "canopyMatchMaker" ],
+    "bundledDependencies" : [ "./gpii/node_modules/transformer", "canopyMatchMaker" ],
     "devDependencies": {
         "browserify": "14.4.0",
         "fluid-grunt-eslint": "18.1.2",
