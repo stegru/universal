@@ -124,12 +124,12 @@
             }
         },
         "configure": [
+            "settings.configure-spi",
             "settings.configure-registry",
             {
                 "type": "gpii.windows.spiSettingsHandler.setHighContrastTheme",
                 "filename": "${{registry}HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\LastHighContrastTheme}"
-            },
-            "settings.configure-spi"
+            }
         ],
         "isInstalled": [{
             "type": "gpii.deviceReporter.alwaysInstalled"
