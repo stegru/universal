@@ -524,6 +524,14 @@
             "maximum": 10
         }
     },
+    "http://registry.gpii.net/common/muteVolume": {
+        "schema": {
+            "title": "Audio mute",
+            "description": "Mutes or unmutes current audio channel.",
+            "type": "boolean",
+            "default": false
+        }
+    },
     "http://registry.gpii.net/common/nightScreen": {
         "schema": {
             "title": "Night Screen",

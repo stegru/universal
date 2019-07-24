@@ -9432,8 +9432,60 @@
                 "inverseCapabilitiesTransformations": {
                     "http://registry\\.gpii\\.net/common/volume": "Volume.value"
                 }
+            },
+            "configureMute": {
+                "type": "gpii.windows.nativeSettingsHandler",
+                "liveness": "live",
+                "options": {
+                    "functionName": "Mute"
+                },
+                "supportedSettings": {
+                    "Mute": {
+                        "schema": {
+                            "title": "System audio mute",
+                            "description": "Mutes or unmutes system audio.",
+                            "enum": [
+                                0,
+                                1
+                            ],
+                            "enumLabels": [
+                                "off",
+                                "on"
+                            ],
+                            "default": 0
+                        }
+                    }
+                },
+                "capabilitiesTransformations": {
+                    "Mute": {
+                        "transform": {
+                            "type": "fluid.transforms.condition",
+                            "conditionPath": "http://registry\\.gpii\\.net/common/muteVolume",
+                            "true": 1,
+                            "false": 0,
+                            "outputPath": "value"
+                        }
+                    }
+                },
+                "inverseCapabilitiesTransformations": {
+                    "http://registry\\.gpii\\.net/common/muteVolume": {
+                        "transform": {
+                            "type": "fluid.transforms.valueMapper",
+                            "inputPath": "Mute.value",
+                            "match": {
+                                "1": true,
+                                "0": false
+                            },
+                            "noMatch": false
+                        }
+                    }
+                }
             }
         },
+        "configure":[
+            "settings.configure",
+            "settings.configureMute"
+        ],
         "start": [],
         "stop": [],
         "isInstalled": [
