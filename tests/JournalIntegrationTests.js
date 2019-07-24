@@ -174,6 +174,16 @@ gpii.tests.journal.initialSettings = {
                 "options": {
                     "functionName": "Volume"
                 }
+            },
+            {
+                "settings": {
+                    "Mute": {
+                        "value": 0
+                    }
+                },
+                "options": {
+                    "functionName": "Mute"
+                }
             }
         ]
     }

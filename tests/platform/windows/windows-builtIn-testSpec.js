@@ -108,6 +108,16 @@ gpii.tests.windows.builtIn = [
                         "options": {
                             "functionName": "Volume"
                         }
+                    },
+                    {
+                        "settings": {
+                            "Volume": {
+                                "value": 1
+                            }
+                        },
+                        "options": {
+                            "functionName": "Mute"
+                        }
                     }
                 ]
             },
