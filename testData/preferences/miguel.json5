@@ -1,0 +1,16 @@
+// # Miguel
+//
+// This preference set mutes system audio.
+{
+    "flat": {
+        "name": "Miguel",
+        "contexts": {
+            "gpii-default": {
+                "name": "Default preferences",
+                "preferences": {
+                    "http://registry.gpii.net/common/muteVolume": true
+                }
+            }
+        }
+    }
+}
